@@ -11,18 +11,21 @@ import java.util.Scanner;
  */
 public class Latihan64_1 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("masukkan angka : ");
-        int angka = input.nextInt();
-        System.out.println("masukkan pangkat : ");
-        int pangkat = input.nextInt();
-        int i = 1;
-        int h = 1;
+        Scanner in = new Scanner(System.in);
+        int angka;
+        int pangkat;
+        int hasil = 1;
+        int i = 0;
         
+        System.out.print("masukkan angka : ");
+        angka = in.nextInt();
+        System.out.print("masukkan pangkat : ");
+        pangkat = in.nextInt();
         do {
-            h = h*angka;
-            i++ ;
-        }while(i<pangkat);
-        System.out.println(angka +" ^ " + pangkat + " = " +h);
+            hasil *= angka;
+            i++;
+        } while (i < pangkat);
+        
+        System.out.println("Hasil pangkat dari " + angka + " pangkat " + pangkat + " adalah " + hasil);
     }
 }

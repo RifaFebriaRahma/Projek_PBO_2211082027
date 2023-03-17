@@ -11,19 +11,20 @@ import java.util.Scanner;
  */
 public class Latihan64 {
     public static void main(String[] args) {
-        Scanner b = new Scanner(System.in);
-        System.out.println("masukkan angka : ");
-        int input = b.nextInt();
+        Scanner in = new Scanner(System.in);
+        int angka;
+        int pangkat;
+        int hasil = 1;
+        int i = 0;
         
-        System.out.println("masukkan pangkat : ");
-        int pangkat = b.nextInt();
-        int i = 1;
-        int h = 1;
-        
-        while (i<pangkat){
-            h = h*input;
+        System.out.print("masukkan angka : ");
+        angka = in.nextInt();
+        System.out.print("masukkan pangkat : ");
+        pangkat = in.nextInt();
+        while (i < pangkat){
+            hasil *= angka;
             i++;
         }
-        System.out.println(input + " ^ " +pangkat +" = " +h);
+        System.out.println("hasil pangkat dari " + angka + " pangkat " + pangkat + " adalah " + hasil);
     }
 }
