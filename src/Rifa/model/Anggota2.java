@@ -2,19 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package rifafebria.model;
+package Rifa.model;
 
 /**
  *
- * @author LAB-MM
+ * @author User
  */
-public class Anggota {
+public class Anggota2 {
     private String kodeanggota;
     private String namaanggota;
     private String alamat;
     private String jeniskelamin;
 
-    public Anggota(String kodeanggota, String namaanggota, String alamat, String jeniskelamin) {
+    public Anggota2(){}
+
+    public Anggota2(String kodeanggota, String namaanggota, String alamat, String jeniskelamin) {
         this.kodeanggota = kodeanggota;
         this.namaanggota = namaanggota;
         this.alamat = alamat;
@@ -52,6 +54,4 @@ public class Anggota {
     public void setJeniskelamin(String jeniskelamin) {
         this.jeniskelamin = jeniskelamin;
     }
-    
-    
 }

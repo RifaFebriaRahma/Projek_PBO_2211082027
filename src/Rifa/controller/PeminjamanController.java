@@ -28,8 +28,8 @@ public class PeminjamanController {
     }
     
     public void bersihForm(){
-        formPeminjaman.getTxtTglPinjam().setText("");
-        formPeminjaman.getTxtTglKembali().setText("");
+        formPeminjaman.getTxtTglpinjam().setText("");
+        formPeminjaman.getTxtTglkembali().setText("");
     }
     
     public void isiCombo(){
@@ -54,8 +54,8 @@ public class PeminjamanController {
     daoAnggota.getAnggota(formPeminjaman.getCboAnggota().getSelectedIndex()));
         peminjaman.setBuku(
             daoBuku.getBuku(formPeminjaman.getCboBuku().getSelectedIndex()));
-        peminjaman.setTglPinjam(formPeminjaman.getTxtTglPinjam().getText());
-        peminjaman.setTglKembali(formPeminjaman.getTxtTglKembali().getText());
+        peminjaman.setTglPinjam(formPeminjaman.getTxtTglpinjam().getText());
+        peminjaman.setTglKembali(formPeminjaman.getTxtTglkembali().getText());
         peminjamanDao.save(peminjaman);
         javax.swing.JOptionPane.showMessageDialog(formPeminjaman,
                 "Entri Ok");
@@ -67,8 +67,8 @@ public class PeminjamanController {
         if(peminjaman != null){
             formPeminjaman.getCboAnggota().setSelectedItem(peminjaman.getAnggota().getNobp());
             formPeminjaman.getCboBuku().setSelectedItem(peminjaman.getBuku().getKode());
-            formPeminjaman.getTxtTglPinjam().setText(peminjaman.getTglPinjam());
-            formPeminjaman.getTxtTglKembali().setText(peminjaman.getTglKembali());
+            formPeminjaman.getTxtTglpinjam().setText(peminjaman.getTglPinjam());
+            formPeminjaman.getTxtTglkembali().setText(peminjaman.getTglKembali());
         }
     }
     
@@ -78,8 +78,8 @@ public class PeminjamanController {
     daoAnggota.getAnggota(formPeminjaman.getCboAnggota().getSelectedIndex()));
         peminjaman.setBuku(
             daoBuku.getBuku(formPeminjaman.getCboBuku().getSelectedIndex()));
-        peminjaman.setTglPinjam(formPeminjaman.getTxtTglPinjam().getText());
-        peminjaman.setTglKembali(formPeminjaman.getTxtTglKembali().getText());
+        peminjaman.setTglPinjam(formPeminjaman.getTxtTglpinjam().getText());
+        peminjaman.setTglKembali(formPeminjaman.getTxtTglkembali().getText());
         peminjamanDao.update(index, peminjaman);
         javax.swing.JOptionPane.showMessageDialog(formPeminjaman,
                 "Update Ok");
